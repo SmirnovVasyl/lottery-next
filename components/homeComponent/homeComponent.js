@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Slider from "react-slick";
 import { useState, useEffect } from 'react';
 
 import Timeline from '@mui/lab/Timeline';
@@ -20,13 +21,12 @@ import star1 from '../../assets/image/Effect/star_1.png'
 import star2 from '../../assets/image/Effect/star_2.png'
 import star3 from '../../assets/image/Effect/star_3.png'
 import star4 from '../../assets/image/Effect/star_4.png'
-import timeline1 from '../../assets/image/timeline/item1.png'
-import timeline2 from '../../assets/image/timeline/item2.png'
-import timeline3 from '../../assets/image/timeline/item3.png'
-import timeline4 from '../../assets/image/timeline/item4.png'
-import timeline5 from '../../assets/image/timeline/item5.png'
-import timeline6 from '../../assets/image/timeline/item6.png'
 import lineEffect from '../../assets/image/Effect/line_effect.png'
+
+import creatorFooter1 from '../../assets/image/creator/icon1.png'
+import creatorFooter2 from '../../assets/image/creator/icon2.png'
+
+import { slickSettings, creatorLists } from './home.config';
 
 let position = '';
 export const HomeComponent = () =>
@@ -154,9 +154,7 @@ export const HomeComponent = () =>
                 <TimelineItem>
                   <TimelineSeparator>
                     <TimelineConnector sx={{ backgroundColor: 'unset' }} />
-                    <TimelineDot className='w-50 md:w-80 p-0 border-0'>
-                      <Image src={timeline1} alt="timeline-item" />
-                    </TimelineDot>
+                    <TimelineDot className={`${styles.timeline_image1} w-50 md:w-80 h-50 md:h-80 p-0 border-0`} />
                     <TimelineConnector sx={{ backgroundColor: '#FB3951' }} />
                   </TimelineSeparator>
 
@@ -177,9 +175,7 @@ export const HomeComponent = () =>
                 <TimelineItem>
                   <TimelineSeparator>
                     <TimelineConnector sx={{ backgroundColor: '#FB3951' }} />
-                    <TimelineDot className='w-50 md:w-80 p-0 border-0'>
-                      <Image src={timeline2} alt="timeline-item" />
-                    </TimelineDot>
+                    <TimelineDot className={`${styles.timeline_image2} w-50 md:w-80 h-50 md:h-80 p-0 border-0`} />
                     <TimelineConnector sx={{ backgroundColor: '#FB3951' }} />
                   </TimelineSeparator>
 
@@ -200,9 +196,7 @@ export const HomeComponent = () =>
                 <TimelineItem>
                   <TimelineSeparator>
                     <TimelineConnector sx={{ backgroundColor: '#FB3951' }} />
-                    <TimelineDot className='w-50 md:w-80 p-0 border-0'>
-                      <Image src={timeline3} alt="timeline-item" />
-                    </TimelineDot>
+                    <TimelineDot className={`${styles.timeline_image3} w-50 md:w-80 h-50 md:h-80 p-0 border-0`} />
                     <TimelineConnector sx={{ backgroundColor: '#FB3951' }} />
                   </TimelineSeparator>
 
@@ -223,9 +217,7 @@ export const HomeComponent = () =>
                 <TimelineItem>
                   <TimelineSeparator>
                     <TimelineConnector sx={{ backgroundColor: '#FB3951' }} />
-                    <TimelineDot className='w-50 md:w-80 p-0 border-0'>
-                      <Image src={timeline4} alt="timeline-item" />
-                    </TimelineDot>
+                    <TimelineDot className={`${styles.timeline_image4} w-50 md:w-80 h-50 md:h-80 p-0 border-0`} />
                     <TimelineConnector sx={{ backgroundColor: '#FB3951' }} />
                   </TimelineSeparator>
 
@@ -246,9 +238,7 @@ export const HomeComponent = () =>
                 <TimelineItem>
                   <TimelineSeparator>
                     <TimelineConnector sx={{ backgroundColor: '#FB3951' }} />
-                    <TimelineDot className='w-50 md:w-80 p-0 border-0'>
-                      <Image src={timeline5} alt="timeline-item" />
-                    </TimelineDot>
+                    <TimelineDot className={`${styles.timeline_image5} w-50 md:w-80 h-50 md:h-80 p-0 border-0`} />
                     <TimelineConnector sx={{ backgroundColor: '#FB3951' }} />
                   </TimelineSeparator>
 
@@ -269,9 +259,7 @@ export const HomeComponent = () =>
                 <TimelineItem>
                   <TimelineSeparator>
                     <TimelineConnector sx={{ backgroundColor: '#FB3951' }} />
-                    <TimelineDot className='w-50 md:w-80 p-0 border-0'>
-                      <Image src={timeline6} alt="timeline-item" />
-                    </TimelineDot>
+                    <TimelineDot className={`${styles.timeline_image6} w-50 md:w-80 h-50 md:h-80 p-0 border-0`} />
                     <TimelineConnector sx={{ backgroundColor: 'unset' }} />
                   </TimelineSeparator>
 
@@ -521,6 +509,70 @@ export const HomeComponent = () =>
             </div>
           </div>
         </div>
+      </div>
+
+      <div className='slider-wrapper_ container_ pt-50'>
+        <Slider {...slickSettings}>
+          {creatorLists.map((list, key) => (
+            <div className='creator-slick-item-contain' key={key}>
+              <div className='creator-slick-item px-25 py-35'>
+                <Image
+                  src={list.user_img}
+                  alt="creator-img"
+                  className='w-full'
+                />
+
+                <div className='flex flex-row justify-between pt-25'>
+                  <span className='text-15 font-[400]'>{list.name}</span>
+                  <div className='flex gap-10'>
+                    <Image
+                      src={creatorFooter1}
+                      alt="creator-img_f"
+                      className='w-full'
+                    />
+                    <Image
+                      src={creatorFooter2}
+                      alt="creator-img_f"
+                      className='w-full'
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
+
+      <div className='slider-wrapper_revert container_ pb-100 pt-15'>
+        <Slider {...slickSettings}>
+          {creatorLists.map((list, key) => (
+            <div className='creator-slick-item-contain' key={key}>
+              <div className='creator-slick-item px-25 py-35'>
+                <Image
+                  src={list.user_img}
+                  alt="creator-img"
+                  className='w-full'
+                />
+
+                <div className='flex flex-row justify-between pt-25'>
+                  <span className='text-15 font-[400]'>{list.name}</span>
+                  <div className='flex gap-10'>
+                    <Image
+                      src={creatorFooter1}
+                      alt="creator-img_f"
+                      className='w-full'
+                    />
+                    <Image
+                      src={creatorFooter2}
+                      alt="creator-img_f"
+                      className='w-full'
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </Slider>
       </div>
     </>
   )

@@ -60,3 +60,38 @@
     height: 100px;
   }
 }
+
+.custom-slick {
+  .slick-container {
+
+    .slick-prev,
+    .slick-next {
+      display: none !important;
+    }
+
+    .creator-slick-item-contain {
+      padding: 10px;
+
+      .creator-slick-item {
+        background-image: url('../../assets/image/load-map/buyBoxBg.png');
+        background-size: 100% 100%;
+      }
+    }
+  }
+}
+
+.slider-wrapper_ {
+  @extend .custom-slick;
+}
+
+.slider-wrapper_revert {
+  @extend .custom-slick;
+
+  .slick-container {
+    transform: rotate(180deg);
+
+    .creator-slick-item-contain {
+      transform: rotate(180deg);
+    }
+  }
+}
