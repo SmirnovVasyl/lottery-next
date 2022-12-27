@@ -13,7 +13,7 @@ import styles from './homeComponent.module.scss'
 import myltRed from '../../assets/image/mylt-img/RED.gif'
 import myltGold from '../../assets/image/mylt-img/GOLD.gif'
 import myltPurple from '../../assets/image/mylt-img/PURPLE.gif'
-import lottery from '../../assets/image/load-map/Lottery.gif'
+import lottery from '../../assets/image/road-map/Lottery.gif'
 import creatorUser from '../../assets/image/creator/user.png'
 import ETHImg from '../../assets/image/creator/eth.png'
 

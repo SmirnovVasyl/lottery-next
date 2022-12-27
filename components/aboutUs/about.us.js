@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import lottery from '../../assets/image/load-map/Lottery.gif'
+import lottery from '../../assets/image/road-map/Lottery.gif'
 import lineEffect from '../../assets/image/Effect/line_effect.png'
 
 export const AboutUs_ = () =>

@@ -73,7 +73,7 @@
       padding: 10px;
 
       .creator-slick-item {
-        background-image: url('../../assets/image/load-map/buyBoxBg.png');
+        background-image: url('../../assets/image/road-map/buyBoxBg.png');
         background-size: 100% 100%;
       }
     }
@@ -92,6 +92,60 @@
 
     .creator-slick-item-contain {
       transform: rotate(180deg);
+    }
+  }
+}
+
+
+// timeline style
+.timeline-border-bg {
+  background-image: url('../image/timeline/timeline_bg.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.timeline-background-img {
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+.timelineBox-type3 {
+  @extend .timeline-background-img;
+  background-image: url('../image/timeline/timeline_bg2.png'), url('../image/timeline/timeline_bg1.png');
+  background-position: left, right;
+
+  .timelineBox {
+    @extend .timeline-border-bg;
+  }
+}
+
+.roadMap-timeline {
+  .MuiTypography-root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .timelineBox-type1 {
+    @extend .timeline-background-img;
+    background-image: url('../image/timeline/timeline_bg1.png');
+    background-position: right;
+    padding-left: 0px;
+
+    .timelineBox {
+      @extend .timeline-border-bg;
+    }
+  }
+
+  .timelineBox-type2 {
+    @extend .timeline-background-img;
+    background-image: url('../image/timeline/timeline_bg2.png');
+    background-position: left;
+    padding-right: 0px;
+
+    .timelineBox {
+      @extend .timeline-border-bg;
     }
   }
 }
