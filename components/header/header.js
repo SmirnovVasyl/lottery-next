@@ -34,9 +34,11 @@ export const Header = ({ class_name, width_ }) =>
         </div>
 
         <div className='mr-0 xl:mr-20 flex items-center'>
-          <div className={`${styles.walletConnectBtn} h-fit rounded-full whitespace-nowrap text-[13px] md:text-15 px-10 py-[8px] md:px-20 md:py-15 `}>
+          <Link href='connectWallet'
+            className={`${styles.walletConnectBtn} h-fit rounded-full whitespace-nowrap text-[13px] md:text-15 px-10 py-[8px] md:px-20 md:py-15 `}
+          >
             wallet connect
-          </div>
+          </Link>
 
           <div className='flex xl:hidden justify-center items-center px-20'>
             <MenuIcon className='text-[40px] cursor-pointer' onClick={menuOpen} />

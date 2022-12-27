@@ -5,10 +5,10 @@ export const slickSettings = {
   infinite: true,
   autoplay: true,
   pauseOnHover: false,
-  speed: 5000,
+  speed: 3000,
   slidesToShow: 5,
   slidesToScroll: 1,
-  autoplaySpeed: 5000,
+  autoplaySpeed: -1000,
   cssEase: "linear",
   className: 'slick-container',
 

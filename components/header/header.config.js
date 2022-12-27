@@ -1,5 +1,5 @@
 export const menuList = [
-  { title: 'Home', link: 'home' },
+  { title: 'Home', link: '../' },
   { title: 'About', link: 'about' },
   { title: 'Roadmap', link: 'loadmap' },
   { title: 'lottery', link: 'lottery' },

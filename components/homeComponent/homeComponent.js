@@ -368,7 +368,7 @@ export const HomeComponent = () =>
         </div>
       </div>
 
-      <div className='container_'>
+      {/* <div className='container_'>
         <div className='flex flex-col justify-center items-center py-50 px-35'>
           <div className='text-[32px] font-[600] leading-[36px] text-center pb-20'>Our creator</div>
           <div className='text-[16px] font-[400] leading-[24px] text-center Poppins pb-80'>
@@ -509,7 +509,7 @@ export const HomeComponent = () =>
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className='slider-wrapper_ container_ pt-50'>
         <Slider {...slickSettings}>

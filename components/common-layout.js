@@ -5,7 +5,7 @@ import styles from './common-layout.module.scss'
 import { Header } from './header/header'
 import { Footer } from './footer/footer'
 
-export const CommonLayout = ({ children }) =>
+export const CommonLayout = ({ children, fixedHeader }) =>
 {
   let wrapperRef = useRef();
   const [width, setWidth] = useState(0);
@@ -14,12 +14,12 @@ export const CommonLayout = ({ children }) =>
   const scrollFunc = (e) =>
   {
     let target = wrapperRef.current;
-    let scrollTop = target.scrollTop;
+    let scrollTop = target?.scrollTop;
     if (typeof scrollTop !== 'number') return;
 
     let cName = 'header-container';
     if (scrollTop > 100) cName = 'header-animation';
-    if (cName !== class_name) setClass_name(cName);
+    if (!!fixedHeader && cName !== class_name) setClass_name(cName);
     if (width !== target.clientWidth) setWidth(target.clientWidth);
   }
 
