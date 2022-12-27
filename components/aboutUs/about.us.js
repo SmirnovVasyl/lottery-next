@@ -31,26 +31,24 @@ export const AboutUs_ = () =>
         </div>
       </div>
 
-      <div>
-        <div className='container_ relative flex flex-col py-50 px-25 gap-25'>
-          <div className='text-[35px] leading-[60px] font-[600] md:text-[45px]'>Who are we?</div>
+      <div className='container_ relative flex flex-col py-50 px-25 gap-25'>
+        <div className='text-[35px] leading-[60px] font-[600] md:text-[45px]'>Who are we?</div>
 
-          <div className='text-[18px] leading-[25px] font-[300] Poppins opacity-60'>
-            We have only one goal on our radar - to change the online crypto lottery industry. And we will do this by providing our users with numerous opportunities to make a profit, the most significant chance in the industry of taking down the best lottery prizes and, of course, a safe place where everyone can have fun and enjoy some thrilling emotions.
-          </div>
-
-          <div className='text-[18px] leading-[25px] font-[300] Poppins opacity-60'>
-            All crypto lotteries rely solely on luck, and we hate that. Players deserve so much more! Here at MYLT, we give users all the freedom they need so that they can take full ownership of their fate. You want the best chance to win big? We offer it. You want to win the new Rolex watch? Join our niche lottery for it. You don't like the prize you have won? Auction it to the other users and make a profit to get new tickets before the draw or simply keep your profit
-          </div>
-
-          <div className='text-[18px] leading-[25px] font-[300] Poppins opacity-60'>
-            Luck isn't the driving force of our lives anymore. So join our passionate community, and let's change the crypto lottery industry forever, all while profiting and having fun together!
-          </div>
-
-          <Image src={lineEffect} alt="line-effect"
-            className='absolute right-0 -top-[90%] w-[50%] hidden lg:flex'
-          />
+        <div className='text-[18px] leading-[25px] font-[300] Poppins opacity-60'>
+          We have only one goal on our radar - to change the online crypto lottery industry. And we will do this by providing our users with numerous opportunities to make a profit, the most significant chance in the industry of taking down the best lottery prizes and, of course, a safe place where everyone can have fun and enjoy some thrilling emotions.
         </div>
+
+        <div className='text-[18px] leading-[25px] font-[300] Poppins opacity-60'>
+          All crypto lotteries rely solely on luck, and we hate that. Players deserve so much more! Here at MYLT, we give users all the freedom they need so that they can take full ownership of their fate. You want the best chance to win big? We offer it. You want to win the new Rolex watch? Join our niche lottery for it. You don't like the prize you have won? Auction it to the other users and make a profit to get new tickets before the draw or simply keep your profit
+        </div>
+
+        <div className='text-[18px] leading-[25px] font-[300] Poppins opacity-60'>
+          Luck isn't the driving force of our lives anymore. So join our passionate community, and let's change the crypto lottery industry forever, all while profiting and having fun together!
+        </div>
+
+        <Image src={lineEffect} alt="line-effect"
+          className='absolute right-0 -top-[90%] w-[50%] hidden lg:flex'
+        />
       </div>
     </>
   )
