@@ -8,10 +8,20 @@
   src: url('./fonts/Poppins-Regular.ttf') format('woff2');
 }
 
+@font-face {
+  font-family: 'Digital Numbers';
+  src: url('./fonts/DigitalNumbers-Regular.woff') format('woff2');
+}
+
+
 .BlackOpsOne {
   font-family: 'Black Ops One';
 }
 
 .Poppins {
   font-family: Poppins;
+}
+
+.digital-numbers {
+  font-family: 'Digital Numbers';
 }

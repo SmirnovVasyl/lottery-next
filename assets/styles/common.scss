@@ -8,3 +8,36 @@
   border: 1px solid #FB3951;
   border-radius: 30px;
 }
+
+.time-count-box {
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.1) 100%);
+  border: 0.5px solid #FFFFFF;
+  backdrop-filter: blur(32.5px);
+  border-radius: 5px;
+  opacity: 0.8;
+}
+
+
+// dashboard main slick style
+.dashboardMain-slick {
+  .slick-slide {
+    .slick-item {
+      padding: 59.8px 40px;
+      transition: 0.5s;
+
+      @media (max-width: 700px) {
+        padding: 29.9px 20px;
+      }
+
+      @media (max-width: 500px) {
+        padding: 11.9px 8px;
+      }
+    }
+  }
+
+  .slick-current {
+    .slick-item {
+      padding: 0px;
+    }
+  }
+}
