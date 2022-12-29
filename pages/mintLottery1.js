@@ -1,11 +1,11 @@
 import { CommonLayout } from "../components/common-layout"
-import { MintLottery_ } from "../components/mintLottery/mintLottery_"
+import { MintLottery1_ } from "../components/mintLottery/mintLottery1_"
 
-export default function MintLottery() 
+export default function MintLottery1() 
 {
   return (
     <CommonLayout fixedHeader={false}>
-      <MintLottery_ />
+      <MintLottery1_ />
     </CommonLayout>
   )
 }

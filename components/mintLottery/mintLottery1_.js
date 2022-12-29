@@ -3,7 +3,7 @@ import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import myltPurple from '../../assets/image/mylt-img/PURPLE.gif'
 
-export const MintLottery_ = () =>
+export const MintLottery1_ = () =>
 {
   return (
     <>
