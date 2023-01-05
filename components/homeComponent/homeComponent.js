@@ -46,15 +46,15 @@ export const HomeComponent = () =>
     let position_ = 'left';
     if (window.innerWidth > 900) position_ = 'alternate';
     if (position_ !== position) setTimeFormat(position_);
-
-    console.log(position)
   }
 
   return (
     <>
-      <div className='w-full'>
+      <video className="fixed top-0 left-0 object-cover w-screen h-screen" src="./video/MYLT_Subtitles.mp4" controls={false} />
+
+      {/* <div className='w-full'>
         <video src='./video/MYLT_firstSection.mp4' autoPlay muted loop />
-      </div>
+      </div> */}
 
       {/* <div className={styles.firstScBg}>
         <div className='container_ grid grid-cols-1 md:grid-cols-2 gap-20 px-35 py-50 md:py-100'>
@@ -98,7 +98,7 @@ export const HomeComponent = () =>
 
       <div className='container_'>
         <div className='flex flex-col px-30 py-50 md:px-80 md:py-100 md:pb-200'>
-          <video src='./video/MYLT_Subtitles.mp4' controls={true} />
+          {/* <video src='./video/MYLT_Subtitles.mp4' controls={true} /> */}
 
           <div className='text-[35px] leading-[60px] font-[700] tracking-[0.04em] pt-30 pb-5 md:pt-80 md:pb-20 md:text-[45px]'>
             What is MYLT?

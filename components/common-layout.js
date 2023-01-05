@@ -5,24 +5,8 @@ import styles from './common-layout.module.scss'
 import { Header } from './header/header'
 import { Footer } from './footer/footer'
 
-export const CommonLayout = ({ children, fixedHeader }) =>
+export const CommonLayout = ({ children }) =>
 {
-  let wrapperRef = useRef();
-  const [width, setWidth] = useState(0);
-  const [class_name, setClass_name] = useState('')
-  useEffect(() => { scrollFunc(); window.addEventListener('resize', () => { scrollFunc(); }, false); }, []);
-  const scrollFunc = (e) =>
-  {
-    let target = wrapperRef.current;
-    let scrollTop = target?.scrollTop;
-    if (typeof scrollTop !== 'number') return;
-
-    let cName = 'header-container';
-    if (scrollTop > 100) cName = 'header-animation';
-    if (!!fixedHeader && cName !== class_name) setClass_name(cName);
-    if (width !== target.clientWidth) setWidth(target.clientWidth);
-  }
-
   return (
     <>
       <Head>
@@ -35,9 +19,9 @@ export const CommonLayout = ({ children, fixedHeader }) =>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
       </Head>
 
-      <main className={styles.lotteryAppWrapper} ref={wrapperRef} onScroll={scrollFunc}>
-        <section className={`header-wrapper`}>
-          <Header class_name={class_name} width_={width} />
+      <main className={styles.lotteryAppWrapper}>
+        <section className={styles.headerSection}>
+          <Header />
         </section>
 
         <section className={styles.contentSection}>

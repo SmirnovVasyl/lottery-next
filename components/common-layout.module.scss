@@ -1,17 +1,23 @@
 .lotteryAppWrapper {
   width: 100%;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-
   display: flex;
   flex-direction: column;
   background-image: url('../assets/image/bg.svg');
   background-size: 100%;
 }
 
+.headerSection {
+  width: 100%;
+  height: fit-content;
+  border-bottom: 3px solid #FC9259;
+  position: fixed;
+  z-index: 10;
+  background: #0000007d;
+}
+
 .contentSection {
   width: 100%;
+  margin-top: 200vh;
   height: fit-content;
 }
 
