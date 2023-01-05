@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import FadeIn from 'react-fade-in';
-import ScrollAnimation from 'react-animate-on-scroll';
 import lineEffect from '../../assets/image/Effect/line_effect.png'
 
 export const AboutUs_ = () =>

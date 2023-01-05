@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Link from 'next/link'
 
 export default function Links()
 {
@@ -15,8 +14,6 @@ export default function Links()
       <main className='text-black'>
         <div className='h-screen w-full flex flex-col justify-center items-center gap-10'>
           <a href='/connectWallet' target='_blank' className='underline text-blue-600'>Connect Wallet</a>
-          <a href='/aboutUs' target='_blank' className='underline text-blue-600'>About Us</a>
-          <a href='/faq' target='_blank' className='underline text-blue-600'>FAQ</a>
           <a href='/roadMap' target='_blank' className='underline text-blue-600'>Roadmap</a>
           <a href='/lottery' target='_blank' className='underline text-blue-600'>Lottery game mode</a>
           <a href='/statistic' target='_blank' className='underline text-blue-600'>Statistic of Lottery 1</a>
@@ -32,6 +29,8 @@ export default function Links()
           <div className='mt-30' />
 
           <a href='/' target='_blank' className='underline text-blue-600'>Home</a>
+          <a href='/aboutUs' target='_blank' className='underline text-blue-600'>About Us</a>
+          <a href='/faq' target='_blank' className='underline text-blue-600'>FAQ</a>
         </div>
       </main>
     </>
