@@ -1,0 +1,88 @@
+@use "sass:map";
+@use './global.config.scss' as v;
+
+.connect_wallet-btn {
+  background: map.get(v.$theme-colors, 'color-9');
+  border-radius: 15px;
+
+  &:hover {
+    background: map.get(v.$theme-colors, 'color-10');
+  }
+}
+
+.fourth-section-bg {
+  background-image: url('../../assets/image/section/fourthBg.png');
+  background-size: 100%;
+}
+
+.fifth-section-bg {
+  background-image: url('../../assets/image/section/fifthBg.png');
+  background-size: 100%;
+}
+
+.timeline-wrapper {
+  .timeline_image1 {
+    background-image: url('../../assets/image/timeline/item1.png');
+    background-size: 100% 100%;
+  }
+
+  .timeline_image2 {
+    background-image: url('../../assets/image/timeline/item2.png');
+    background-size: 100% 100%;
+  }
+
+  .timeline_image3 {
+    background-image: url('../../assets/image/timeline/item3.png');
+    background-size: 100% 100%;
+  }
+
+  .timeline_image4 {
+    background-image: url('../../assets/image/timeline/item4.png');
+    background-size: 100% 100%;
+  }
+
+  .timeline_image5 {
+    background-image: url('../../assets/image/timeline/item5.png');
+    background-size: 100% 100%;
+  }
+
+  .timeline_image6 {
+    background-image: url('../../assets/image/timeline/item6.png');
+    background-size: 100% 100%;
+  }
+
+  .timelineBox_contain {
+    padding: 10px;
+    padding-right: 0px;
+    background-image: url('../../assets/image/timeline/timeline_bg2.png');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: left;
+
+    @media (max-width: 900px) {
+      padding: 10px;
+      padding-left: 0px;
+      background-image: url('../../assets/image/timeline/timeline_bg1.png');
+      background-position: right;
+    }
+
+    @media (max-width: 640px) {
+      background: unset;
+      padding: unset;
+    }
+  }
+
+  .timelineBox_contain2 {
+    padding: 10px;
+    padding-left: 0px;
+    background-image: url('../../assets/image/timeline/timeline_bg1.png');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: right;
+
+    @media (max-width: 640px) {
+      background: unset;
+      padding: unset;
+    }
+  }
+}
