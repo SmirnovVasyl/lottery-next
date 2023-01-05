@@ -20,6 +20,7 @@ const Splash = () =>
   useEffect(() => { window.addEventListener("scroll", scrollControl); }, []);
   const scrollControl = () =>
   {
+    if (!demo_canvas.current || !canvas_wrapper.current) return;
     let opacity = 1 - scrollY / innerHeight;
     let scale = 0.2 + 0.8 * opacity;
     let offset = parseInt(UNIT * 100 * scrollY / innerHeight);

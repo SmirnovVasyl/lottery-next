@@ -18,7 +18,7 @@ export const CommonLayout = ({ children, animation }) =>
 
       <main className='lottery-layout-wrapper'>
         <section className='header-section'><Header animation={animation} /></section>
-        <section className='content-section'>{children}</section>
+        <section className={`content-section ${!!animation ? 'mt-[200vh]' : 'mt-60'}`}>{children}</section>
         <section className='footer-section'><Footer /></section>
       </main>
     </>

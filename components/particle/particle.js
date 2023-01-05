@@ -106,6 +106,7 @@ const Particle = ({ demo_canvas, large_header }) =>
 
     function mouseMove(e)
     {
+      if (!demo_canvas.current || !large_header.current) return;
       var posx = 0;
       var posy = 0;
       if (e.pageX || e.pageY)
@@ -129,12 +130,14 @@ const Particle = ({ demo_canvas, large_header }) =>
 
     function scrollCheck()
     {
+      if (!demo_canvas.current || !large_header.current) return;
       if (document.body.scrollTop > height) animateHeader = false;
       else animateHeader = true;
     }
 
     function resize()
     {
+      if (!demo_canvas.current || !large_header.current) return;
       width = window.innerWidth;
       height = window.innerHeight;
       largeHeader.style.height = height + "px";
@@ -145,6 +148,7 @@ const Particle = ({ demo_canvas, large_header }) =>
     // animation
     function initAnimation()
     {
+      if (!demo_canvas.current || !large_header.current) return;
       animate();
       for (var i in points)
       {
@@ -156,6 +160,7 @@ const Particle = ({ demo_canvas, large_header }) =>
     {
       if (animateHeader)
       {
+        if (!demo_canvas.current || !large_header.current) return;
         ctx.clearRect(0, 0, width, height);
         for (var i in points)
         {
@@ -187,6 +192,7 @@ const Particle = ({ demo_canvas, large_header }) =>
 
     function shiftPoint(p)
     {
+      if (!demo_canvas.current || !large_header.current) return;
       TweenLite.to(p, 1 + 1 * Math.random(), {
         x: p.originX - 50 + Math.random() * 100,
         y: p.originY - 50 + Math.random() * 100,
@@ -201,6 +207,7 @@ const Particle = ({ demo_canvas, large_header }) =>
     // Canvas manipulation
     function drawLines(p)
     {
+      if (!demo_canvas.current || !large_header.current) return;
       if (!p.active) return;
       for (var i in p.closest)
       {
@@ -214,6 +221,7 @@ const Particle = ({ demo_canvas, large_header }) =>
 
     function Circle(pos, rad, color)
     {
+      if (!demo_canvas.current || !large_header.current) return;
       var _this = this;
 
       // constructor
