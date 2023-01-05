@@ -4,7 +4,7 @@ import { HomeComponent } from "../components/homeComponent/homeComponent"
 export default function Home()
 {
   return (
-    <CommonLayout fixedHeader={true}>
+    <CommonLayout animation={true}>
       <HomeComponent />
     </CommonLayout>
   )

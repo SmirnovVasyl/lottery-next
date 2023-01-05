@@ -1,18 +1,16 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useEffect, useState } from 'react';
-import { Menu, Divider } from '@mui/material';
+import { useState } from 'react';
+import { Menu } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
-import './header.module.scss'
-import styles from './header.module.scss'
 import { menuList } from './header.config'
 import Logo from '../../assets/image/logo.png'
 import Splash from "../splash";
 
 
-export const Header = () =>
+export const Header = ({ animation }) =>
 {
   const [anchorEl, setAnchorEl] = useState(null);
   const openStatus = Boolean(anchorEl);
@@ -20,8 +18,7 @@ export const Header = () =>
   const menuClose = () => { setAnchorEl(null); };
 
   return (
-    // <div className={class_name} style={{ width: width_ + 'px ' }}>
-    <div className={`${styles.headerContainer} container_`}>
+    <div className='header-container container_'>
       <div className=''>
         <Image src={Logo} alt="logo-img" className='max-w-130 md:max-w-[100%]' />
       </div>
@@ -36,7 +33,7 @@ export const Header = () =>
 
       <div className='mr-0 xl:mr-20 flex items-center'>
         <Link href='connectWallet'
-          className={`${styles.walletConnectBtn} h-fit rounded-full whitespace-nowrap text-[13px] md:text-15 px-10 py-[8px] md:px-20 md:py-15 `}
+          className='wallet-connect-btn h-fit rounded-full whitespace-nowrap text-[13px] md:text-15 px-10 py-[8px] md:px-20 md:py-15'
         >
           wallet connect
         </Link>
@@ -81,8 +78,7 @@ export const Header = () =>
         </div>
       </div>
 
-      <Splash />
+      {!!animation && (<Splash />)}
     </div>
-    // </div>
   )
 }

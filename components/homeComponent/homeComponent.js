@@ -50,7 +50,7 @@ export const HomeComponent = () =>
 
   return (
     <>
-      <video className="fixed top-0 left-0 object-cover w-screen h-screen" src="./video/MYLT_Subtitles.mp4" controls={false} />
+      <video className="top-0 left-0 object-cover w-screen h-screen" src="./video/MYLT_Subtitles.mp4" controls={false} />
 
       {/* <div className='w-full'>
         <video src='./video/MYLT_firstSection.mp4' autoPlay muted loop />

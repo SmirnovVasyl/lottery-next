@@ -1,0 +1,96 @@
+@use "sass:map";
+
+$theme-colors : ( // 
+  'color-1': #8A1797,
+  'color-2': #8D1575,
+  'color-3': #323150,
+  'color-4': #FFFFFF,
+  'color-5': #FFC55F,
+  'color-6': #FB3951,
+  'color-7': #E25A64,
+  'color-8': #A5434D,
+  'color-9': linear-gradient(100.98deg, #FFC55F 0%, #FB3951 58.18%, #E25A64 100%),
+  'color-10': linear-gradient(100.98deg, #E25A64 0%, #FB3951 58.18%, #FFC55F 100%),
+  'color-11': linear-gradient(90deg, #ffc55f00 0%, #FFC55F 50%, #FB3951 80.21%, #E25A64 100%),
+  'color-12': linear-gradient(90deg, #E25A64 0%, #FB3951 50%, #FFC55F 80.21%, #ffc55f00 100%),
+);
+
+.color-1 {
+  color: map.get($theme-colors, 'color-1');
+}
+
+.color-2 {
+  color: map.get($theme-colors, 'color-2');
+}
+
+.color-3 {
+  color: map.get($theme-colors, 'color-3');
+}
+
+.color-4 {
+  color: map.get($theme-colors, 'color-4');
+}
+
+.color-5 {
+  color: map.get($theme-colors, 'color-5');
+}
+
+.color-6 {
+  color: map.get($theme-colors, 'color-6');
+}
+
+.color-7 {
+  color: map.get($theme-colors, 'color-7');
+}
+
+.color-8 {
+  color: map.get($theme-colors, 'color-8');
+}
+
+.bg-color-1 {
+  background-color: map.get($theme-colors, 'color-1');
+}
+
+.bg-color-2 {
+  background-color: map.get($theme-colors, 'color-2');
+}
+
+.bg-color-3 {
+  background-color: map.get($theme-colors, 'color-3');
+}
+
+.bg-color-4 {
+  background-color: map.get($theme-colors, 'color-4');
+}
+
+.bg-color-5 {
+  background-color: map.get($theme-colors, 'color-5');
+}
+
+.bg-color-6 {
+  background-color: map.get($theme-colors, 'color-6');
+}
+
+.bg-color-7 {
+  background-color: map.get($theme-colors, 'color-7');
+}
+
+.bg-color-8 {
+  background-color: map.get($theme-colors, 'color-8');
+}
+
+.bg-color-9 {
+  background: map.get($theme-colors, 'color-9');
+}
+
+.bg-color-10 {
+  background: map.get($theme-colors, 'color-10');
+}
+
+.bg-color-11 {
+  background: map.get($theme-colors, 'color-11');
+}
+
+.bg-color-12 {
+  background: map.get($theme-colors, 'color-12');
+}

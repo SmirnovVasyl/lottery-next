@@ -1,11 +1,8 @@
 import Head from 'next/head'
-import { useEffect, useRef, useState } from 'react'
-
-import styles from './common-layout.module.scss'
 import { Header } from './header/header'
 import { Footer } from './footer/footer'
 
-export const CommonLayout = ({ children }) =>
+export const CommonLayout = ({ children, animation }) =>
 {
   return (
     <>
@@ -19,18 +16,10 @@ export const CommonLayout = ({ children }) =>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
       </Head>
 
-      <main className={styles.lotteryAppWrapper}>
-        <section className={styles.headerSection}>
-          <Header />
-        </section>
-
-        <section className={styles.contentSection}>
-          {children}
-        </section>
-
-        <section className={styles.footerSection}>
-          <Footer />
-        </section>
+      <main className='lottery-layout-wrapper'>
+        <section className='header-section'><Header animation={animation} /></section>
+        <section className='content-section'>{children}</section>
+        <section className='footer-section'><Footer /></section>
       </main>
     </>
   )

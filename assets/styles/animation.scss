@@ -1,13 +1,14 @@
-#canvas {
+.canvas_wrapper {
   background: #000;
-  z-index: 10;
   position: fixed;
   width: 100%;
   height: 100vh;
   position: fixed;
+  left: 0;
+  top: 0;
 }
 
-#large-header {
+.large_header {
   background-image: url('../image/background.jpg');
   background-size: 100% 100%;
 }

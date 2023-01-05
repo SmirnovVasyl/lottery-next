@@ -10,12 +10,6 @@ export default function Document()
       </Head>
 
       <body>
-        <div id="canvas">
-          <div id="large-header">
-            <canvas id="demo-canvas"></canvas>
-          </div>
-        </div>
-
         <Main />
         <NextScript />
       </body>
