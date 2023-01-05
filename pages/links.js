@@ -14,7 +14,6 @@ export default function Links()
 
       <main className='text-black'>
         <div className='h-screen w-full flex flex-col justify-center items-center gap-10'>
-          <a href='/' target='_blank' className='underline text-blue-600'>Home</a>
           <a href='/connectWallet' target='_blank' className='underline text-blue-600'>Connect Wallet</a>
           <a href='/aboutUs' target='_blank' className='underline text-blue-600'>About Us</a>
           <a href='/faq' target='_blank' className='underline text-blue-600'>FAQ</a>
@@ -29,6 +28,10 @@ export default function Links()
           <a href='/mintLottery1' target='_blank' className='underline text-blue-600'>Mint Lottery 1</a>
           <a href='/mintLottery2' target='_blank' className='underline text-blue-600'>Mint Lottery 2</a>
           <a href='/mintLottery3' target='_blank' className='underline text-blue-600'>Mint Lottery 3</a>
+
+          <div className='mt-30' />
+
+          <a href='/' target='_blank' className='underline text-blue-600'>Home</a>
         </div>
       </main>
     </>
