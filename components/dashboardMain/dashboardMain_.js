@@ -11,57 +11,71 @@ export const DashboardMain_ = () =>
 {
   return (
     <>
-      <div className='container_ grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-20 pt-100 px-20 '>
-        <div className='flex flex-col justify-start items-center'>
-          <div className='box-border-image w-full h-full max-w-[250px] px-30 py-50 flex flex-col gap-50 justify-center'>
-            <div className='text-35 font-[700] leading-8 text-center'>PHASE</div>
-            <div className='text-60 font-[700] leading-10 text-center'>1</div>
+      <div className='container_ flex flex-col gap-30 px-20 pt-100'>
+        <div className='grid grid-cols-12 gap-20 '>
+          <div className='dashboard-box col-span-3'>
+            <div className='dashboard-box-header'>Currrent Phase</div>
+            <div className='dashboard-box-body'>Phase 1</div>
+          </div>
+
+          <div className='dashboard-box col-span-3'>
+            <div className='dashboard-box-header'>Currrent Phase</div>
+            <div className='dashboard-box-body'>Minted</div>
+          </div>
+
+          <div className='dashboard-box col-span-6'>
+            <div className='dashboard-box-header'>Countdown to Next Stage</div>
+            <div className='dashboard-box-body'>Pre-Reveal in 1d 13h 56m 17s</div>
           </div>
         </div>
 
-        <div className='w-full col-span-1 xl:col-span-2 flex flex-col gap-20'>
-          <div className='flex felx-col justify-center max-w-250 md:max-w-[100%] m-auto'>
-            <div className='text-30 xl:text-40 font-[700] text-center'>Next stage is going to start in</div>
+        <div className='grid grid-cols-12 gap-20'>
+          <div className='dashboard-box col-span-7'>
+            <div className='dashboard-box-header'>Winning Chance</div>
+            <div className='dashboard-box-body'>
+
+            </div>
           </div>
 
-          <div className='flex-1 grid grid-cols-3 select-none'>
-            <div className='flex flex-col justify-center items-center gap-10'>
-              <div className='flex flex-row gap-10'>
-                <div className='time-count-box digital-numbers text-20 md:text-25 xl:text-30 font-[400] p-5'>0</div>
-                <div className='time-count-box digital-numbers text-20 md:text-25 xl:text-30 font-[400] p-5'>0</div>
+          <div className='col-span-5'>
+            <div className='grid grid-rows-2 gap-20'>
+              <div className='dashboard-box col-span-3'>
+                <div className='dashboard-box-header'>Expected Average Earnings</div>
+                <div className='dashboard-box-body'>0.15 ETH</div>
               </div>
-              <div className='text-15'>DAYS</div>
-            </div>
 
-            <div className='flex flex-col justify-center items-center gap-10'>
-              <div className='flex flex-row gap-10'>
-                <div className='time-count-box digital-numbers text-20 md:text-25 xl:text-30 font-[400] p-5'>0</div>
-                <div className='time-count-box digital-numbers text-20 md:text-25 xl:text-30 font-[400] p-5'>0</div>
+              <div className='dashboard-box col-span-3'>
+                <div className='dashboard-box-header'>Expected Average Tokens</div>
+                <div className='dashboard-box-body'>5,075</div>
               </div>
-              <div className='text-15'>HOURS</div>
-            </div>
-
-            <div className='flex flex-col justify-center items-center gap-10'>
-              <div className='flex flex-row gap-10'>
-                <div className='time-count-box digital-numbers text-20 md:text-25 xl:text-30 font-[400] p-5'>0</div>
-                <div className='time-count-box digital-numbers text-20 md:text-25 xl:text-30 font-[400] p-5'>0</div>
-              </div>
-              <div className='text-15'>MINUTES</div>
             </div>
           </div>
         </div>
 
-        <div className='flex flex-col justify-start items-center'>
-          <div className='box-border-image w-full h-full max-w-[250px] px-30 py-50 flex flex-col gap-50 justify-center'>
-            <div className='text-35 font-[700] leading-8 text-center'>Price pool value</div>
-            <div className='text-60 font-[700] leading-10 text-center'>
-              350<span className='text-20 font-[700]'> ETH</span>
+        <div className='grid grid-cols-12 gap-20'>
+          <div className='dashboard-box col-span-5'>
+            <div className='dashboard-box-header'>Prize Pool Volume</div>
+            <div className='dashboard-box-body'>300ETH</div>
+          </div>
+
+          <div className='dashboard-box col-span-7'>
+            <div className='dashboard-box-header'>Lottery Statistics</div>
+            <div className='dashboard-box-body'>
+
             </div>
           </div>
         </div>
       </div>
 
-      <div className='container_ py-100 px-50'>
+      <div className='container_ py-100 px-50 flex flex-col gap-50'>
+        <div className='text-40 font-[700] text-center leading-10'>
+          Mylt Your Lottery Ticket Now!
+        </div>
+
+        <div className='text-20 font-[400] text-center Poppins'>
+          Sometimes, winning the lottery is all about SPEED. Will you let all the other players exploit the bundle offers and increase their winning chances while you hesitate? The stakes are high, and there is a shortage of top prizes. So, embrace your luck and mint as many lottery tickets as possible before they are gone!
+        </div>
+
         <Slider {...slickSettings}>
           <div className='flex slick-item'>
             <Image
@@ -111,30 +125,11 @@ export const DashboardMain_ = () =>
             />
           </div>
         </Slider>
-      </div>
 
-      <div className='container_ flex flex-col justify-center items-center pb-200 px-20 md:px-35'>
-        <div className='w-full grid grid-cols-1 gap-50 md:grid-cols-3'>
-          <div className='flex flex-col justify-start items-center'>
-            <div className='box-border-image w-full h-full max-w-[250px] px-30 py-50 flex flex-col gap-35 justify-center'>
-              <div className='text-20 font-[700] leading-8 text-center'>Winning Chance</div>
-              <div className='text-40 font-[700] leading-10 text-center'>86 %</div>
-            </div>
-          </div>
-
-          <div className='flex flex-col justify-start items-center'>
-            <div className='box-border-image w-full h-full max-w-[250px] px-30 py-50 flex flex-col gap-35 justify-center'>
-              <div className='text-20 font-[700] leading-8 text-center'>average earnings in ETH</div>
-              <div className='text-40 font-[700] leading-10 text-center'>320<span className='text-20'> ETH</span></div>
-            </div>
-          </div>
-
-          <div className='flex flex-col justify-start items-center'>
-            <div className='box-border-image w-full h-full max-w-[250px] px-30 py-50 flex flex-col gap-35 justify-center'>
-              <div className='text-20 font-[700] leading-8 text-center'>Estimated Average Tokens</div>
-              <div className='text-40 font-[700] leading-10 text-center'>326</div>
-            </div>
-          </div>
+        <div className='flex flex-row pt-30 items-center justify-center'>
+          <span className='mint-btn-1 text-20 font-[500] leading-6 px-30 py-10 cursor-pointer select-none'>
+            Connect Wallet
+          </span>
         </div>
       </div>
     </>

@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import FadeIn from 'react-fade-in';
-import ScrollAnimation from 'react-animate-on-scroll';
 
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
