@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Slider from "react-slick";
+import ScrollAnimation from 'react-animate-on-scroll';
 
 import myltRed from '../../assets/image/mylt-img/RED.gif'
 import myltGold from '../../assets/image/mylt-img/GOLD.gif'
@@ -12,32 +13,32 @@ export const DashboardMain_ = () =>
   return (
     <>
       <div className='container_ flex flex-col gap-30 px-20 pt-100'>
-        <div className='grid grid-cols-12 gap-20 '>
-          <div className='dashboard-box col-span-3'>
+        <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-20'>
+          <div className='dashboard-box col-span-1'>
             <div className='dashboard-box-header'>Currrent Phase</div>
             <div className='dashboard-box-body'>Phase 1</div>
           </div>
 
-          <div className='dashboard-box col-span-3'>
+          <div className='dashboard-box col-span-1'>
             <div className='dashboard-box-header'>Currrent Phase</div>
             <div className='dashboard-box-body'>Minted</div>
           </div>
 
-          <div className='dashboard-box col-span-6'>
+          <div className='dashboard-box col-span-1 md:col-span-2'>
             <div className='dashboard-box-header'>Countdown to Next Stage</div>
             <div className='dashboard-box-body'>Pre-Reveal in 1d 13h 56m 17s</div>
           </div>
         </div>
 
-        <div className='grid grid-cols-12 gap-20'>
-          <div className='dashboard-box col-span-7'>
+        <div className='grid grid-cols-1 md:grid-cols-12 gap-20'>
+          <div className='dashboard-box col-span-1 md:col-span-7'>
             <div className='dashboard-box-header'>Winning Chance</div>
             <div className='dashboard-box-body'>
 
             </div>
           </div>
 
-          <div className='col-span-5'>
+          <div className='col-span-1 md:col-span-5'>
             <div className='grid grid-rows-2 gap-20'>
               <div className='dashboard-box col-span-3'>
                 <div className='dashboard-box-header'>Expected Average Earnings</div>
@@ -52,13 +53,13 @@ export const DashboardMain_ = () =>
           </div>
         </div>
 
-        <div className='grid grid-cols-12 gap-20'>
-          <div className='dashboard-box col-span-5'>
+        <div className='grid grid-cols-1 md:grid-cols-12 gap-20'>
+          <div className='dashboard-box col-span-1 md:col-span-5'>
             <div className='dashboard-box-header'>Prize Pool Volume</div>
             <div className='dashboard-box-body'>300ETH</div>
           </div>
 
-          <div className='dashboard-box col-span-7'>
+          <div className='dashboard-box col-span-1 md:col-span-7'>
             <div className='dashboard-box-header'>Lottery Statistics</div>
             <div className='dashboard-box-body'>
 
@@ -127,9 +128,11 @@ export const DashboardMain_ = () =>
         </Slider>
 
         <div className='flex flex-row pt-30 items-center justify-center'>
-          <span className='mint-btn-1 text-20 font-[500] leading-6 px-30 py-10 cursor-pointer select-none'>
-            Connect Wallet
-          </span>
+          <ScrollAnimation animateIn='flipInY'>
+            <span className='mint-btn-1 text-20 font-[500] leading-6 px-30 py-10 cursor-pointer select-none'>
+              Connect Wallet
+            </span>
+          </ScrollAnimation>
         </div>
       </div>
     </>
