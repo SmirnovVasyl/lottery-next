@@ -1,9 +1,12 @@
-.footerMenu {
-  background: linear-gradient(100.98deg, #FFC55F 0%, #FB3951 58.18%, #E25A64 100%);
+@use "sass:map";
+@use './global.config.scss' as v;
+
+.footer-menu-item {
+  background: map.get(v.$theme-colors, 'color-9');
   border-radius: 400px
 }
 
-.footerBg {
+.footer-background {
   background-image: radial-gradient(circle 300px at 50% 150%, #fc925996, #ffffff0a);
   background-size: 100% 100%;
   background-repeat: no-repeat;

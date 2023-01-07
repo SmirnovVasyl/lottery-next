@@ -1,11 +1,11 @@
-import { CommonLayout1 } from "../components/common-layout1"
+import { CommonLayout2 } from "../components/common-layout2"
 import { MintFinished_ } from '../components/mintFinished/mintFinished_'
 
 export default function ClaimRewardPhysical() 
 {
   return (
-    <CommonLayout1 fixedHeader={false}>
+    <CommonLayout2 headerMenu={true}>
       <MintFinished_ />
-    </CommonLayout1>
+    </CommonLayout2>
   )
 }

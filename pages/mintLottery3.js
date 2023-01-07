@@ -1,11 +1,11 @@
-import { CommonLayout1 } from "../components/common-layout1"
+import { CommonLayout2 } from "../components/common-layout2"
 import { MintLottery3_ } from "../components/mintLottery/mintLottery3_ "
 
 export default function MintLottery3() 
 {
   return (
-    <CommonLayout1 fixedHeader={false}>
+    <CommonLayout2>
       <MintLottery3_ />
-    </CommonLayout1>
+    </CommonLayout2>
   )
 }

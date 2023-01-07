@@ -1,11 +1,11 @@
-import { CommonLayout1 } from "../components/common-layout1"
+import { CommonLayout2 } from "../components/common-layout2"
 import { ClaimRewardPhysical_ } from '../components/claimRewardPhysical/claimRewardPhysical_'
 
 export default function ClaimRewardPhysical() 
 {
   return (
-    <CommonLayout1 fixedHeader={false}>
+    <CommonLayout2>
       <ClaimRewardPhysical_ />
-    </CommonLayout1>
+    </CommonLayout2>
   )
 }

@@ -1,8 +1,6 @@
 import Image from 'next/image'
 
-import styles from './footer.module.scss'
 import { footerMenu } from './footer.config'
-import Logo from '../../assets/image/logo.png'
 import Twitter from '../../assets/image/footer/twitter.svg'
 import Discord from '../../assets/image/footer/discord.svg'
 import Telegram from '../../assets/image/footer/telegram.svg'
@@ -14,7 +12,7 @@ import myltPurple from '../../assets/image/mylt-img/PURPLE.gif'
 export const Footer1 = () =>
 {
   return (
-    <div className={styles.footerBg}>
+    <div className='footer-background'>
       <div className="flex flex-col justify-center items-center py-30">
 
         <div className='relative max-w-200 mx-20 flex justify-center items-center'>
@@ -55,15 +53,15 @@ export const Footer1 = () =>
         </div>
 
         <div className='flex flex-col gap-20 xs:flex-row'>
-          <div className={`${styles.footerMenu} flex flex-row p-5 sm:p-[8px] w-30 h-30 sm:w-40 sm:h-40`}>
+          <div className='footer-menu-item flex flex-row p-5 sm:p-[8px] w-30 h-30 sm:w-40 sm:h-40'>
             <Image src={Twitter} alt="logo-img" className='w-full h-full' />
           </div>
 
-          <div className={`${styles.footerMenu} flex flex-row p-5 sm:p-[8px] w-30 h-30 sm:w-40 sm:h-40`}>
+          <div className='footer-menu-item flex flex-row p-5 sm:p-[8px] w-30 h-30 sm:w-40 sm:h-40'>
             <Image src={Discord} alt="logo-img" className='w-full h-full' />
           </div>
 
-          <div className={`${styles.footerMenu} flex flex-row p-5 sm:p-[8px] w-30 h-30 sm:w-40 sm:h-40`}>
+          <div className='footer-menu-item flex flex-row p-5 sm:p-[8px] w-30 h-30 sm:w-40 sm:h-40'>
             <Image src={Telegram} alt="logo-img" className='w-full h-full' />
           </div>
         </div>

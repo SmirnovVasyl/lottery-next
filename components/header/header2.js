@@ -1,13 +1,11 @@
-
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react';
 import { Menu } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 import { menuList } from './header.config'
-import Splash from "../splash";
-
 import Logo from '../../assets/image/logo.png'
 import WalletConnect from '../../assets/image/connect-wallet/WalletConnect.png'
 import Formatmatic from '../../assets/image/connect-wallet/Formatmatic.png'
@@ -17,7 +15,7 @@ import Phantom from '../../assets/image/connect-wallet/Phantom.png'
 import Core from '../../assets/image/connect-wallet/Core.png'
 
 
-export const Header2 = ({ animation }) =>
+export const Header2 = ({ headerMenu }) =>
 {
   const [anchorEl, setAnchorEl] = useState(null);
   const openStatus = Boolean(anchorEl);
@@ -31,19 +29,20 @@ export const Header2 = ({ animation }) =>
 
   return (
     <div className='header-container container_'>
-      <div className=''>
+      <div className='flex flex-row items-center'>
         <Image src={Logo} alt="logo-img" className='max-w-130 md:max-w-[100%]' />
+        {!headerMenu && (<div className='text-30 font-[700] md:text-50 hidden ss:block'>MYLT</div>)}
       </div>
 
-      <div className='hidden flex-row gap-25 cursor-pointer xl:flex'>
+      {!!headerMenu && (<div className='hidden flex-row gap-25 cursor-pointer xl:flex'>
         {menuList.map((item, key) => (
           <Link href={item.link} key={key}>
             {item.title}
           </Link>
         ))}
-      </div>
+      </div>)}
 
-      <div className='mr-0 xl:mr-20 flex items-center'>
+      <div className='mr-10 xl:mr-20 flex items-center'>
         <div onClick={WCmenuOpen}
           className='wallet-connect-btn h-fit rounded-full whitespace-nowrap text-[13px] md:text-15 px-10 py-[8px] md:px-20 md:py-15'
         >wallet connect</div>
@@ -52,29 +51,22 @@ export const Header2 = ({ animation }) =>
           anchorEl={anchorElWC}
           open={openStatusWC}
           onClose={WCmenuClose}
-          anchorOrigin={{ vertical: 'bottom', horizontal: 'right', }}
+          anchorOrigin={{ vertical: 'top', horizontal: 'right', }}
           transformOrigin={{ vertical: 'top', horizontal: 'right', }}
           PaperProps={{
             sx: {
-              mt: 1.5,
+              mt: -0.5,
               color: 'white',
               bgcolor: '#323150',
-              overflow: 'visible',
-              '& .MuiAvatar-root': {
-                width: 32, height: 32,
-                ml: -0.5, mr: 1,
-              },
-              '&:before': {
-                content: '""',
-                display: 'block', position: 'absolute',
-                top: 0, right: 14, width: 10, height: 10,
-                bgcolor: '#323150', zIndex: 0,
-                transform: 'translateY(-50%) rotate(45deg)',
-              },
             },
           }}
         >
-          <div className='w-250 flex flex-col gap-10 px-15'>
+          <div className='w-250 flex flex-col gap-10 px-15 py-10'>
+            <div className='flex flex-row justify-between items-center'>
+              <span className='text-20 font-[500]'>Select your wallet</span>
+              <CloseIcon className='text-25 cursor-pointer' onClick={WCmenuClose} />
+            </div>
+
             <div className='flex flex-row gap-10 cursor-pointer'>
               <Image src={metamask} alt="connect-wallet" className='w-30 h-30' />
               <div className='text-[18] font-[500] uppercase'>metamask</div>
@@ -107,7 +99,7 @@ export const Header2 = ({ animation }) =>
           </div>
         </Menu>
 
-        <div className='flex xl:hidden justify-center items-center px-20'>
+        {!!menuList && (<div className='flex xl:hidden justify-center items-center px-20'>
           <MenuIcon className='text-[40px] cursor-pointer' onClick={menuOpen} />
 
           <Menu
@@ -144,10 +136,8 @@ export const Header2 = ({ animation }) =>
               ))}
             </div>
           </Menu>
-        </div>
+        </div>)}
       </div>
-
-      {!!animation && (<Splash />)}
     </div>
   )
 }

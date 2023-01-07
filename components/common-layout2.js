@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { Header2 } from './header/header2'
 import { Footer2 } from './footer/footer2'
 
-export const CommonLayout2 = ({ children, animation }) =>
+export const CommonLayout2 = ({ children, headerMenu }) =>
 {
   return (
     <>
@@ -18,8 +18,8 @@ export const CommonLayout2 = ({ children, animation }) =>
       </Head>
 
       <main className='lottery-layout-wrapper'>
-        <section className='header-section'><Header2 animation={animation} /></section>
-        <section className={`content-section ${!!animation ? 'mt-[200vh]' : 'mt-60'}`}>{children}</section>
+        <section className='header-section'><Header2 headerMenu={headerMenu} /></section>
+        <section className={`content-section mt-60`}>{children}</section>
         <section className='footer-section'><Footer2 /></section>
       </main>
     </>

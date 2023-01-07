@@ -1,11 +1,11 @@
-import { CommonLayout1 } from "../components/common-layout1"
+import { CommonLayout2 } from "../components/common-layout2"
 import { ClaimForm_ } from '../components/claimForm/claimForm_'
 
 export default function ClaimForm() 
 {
   return (
-    <CommonLayout1 fixedHeader={false}>
+    <CommonLayout2>
       <ClaimForm_ />
-    </CommonLayout1>
+    </CommonLayout2>
   )
 }
