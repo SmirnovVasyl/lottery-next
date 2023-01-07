@@ -17,7 +17,13 @@ const Splash = () =>
   const demo_canvas = useRef();
   const large_header = useRef();
   const canvas_wrapper = useRef();
-  useEffect(() => { window.addEventListener("scroll", scrollControl); }, []);
+
+  let eventRegistered = false;
+  let videoInitiated = false;
+  
+  useEffect(() => { 
+    window.addEventListener("scroll", scrollControl); 
+  }, []);
   const scrollControl = () =>
   {
     if (!demo_canvas.current || !canvas_wrapper.current) return;
@@ -27,7 +33,15 @@ const Splash = () =>
     let newHeight = INIHEIGHT + offset;
 
     let canvas = demo_canvas.current;
+    
     let video = document.querySelector("video");
+
+    if(!eventRegistered) video.addEventListener("click", () => {
+      let paused = video.paused;
+      if(paused) video.play();
+      else video.pause();
+    });
+
     let canvasContainer = canvas_wrapper.current;
 
     canvas.style.opacity = opacity;
@@ -47,10 +61,11 @@ const Splash = () =>
       MYLT.current.style.display = "none";
       video.style.position = "absolute";
       video.style.top = "100vh";
-      if (video.paused)
+      if (!videoInitiated)
       {
         video.muted = true;
         video.play();
+        videoInitiated = true;
       }
     } else
     {
@@ -58,8 +73,8 @@ const Splash = () =>
       MYLT.current.style.display = "block";
       video.style.position = "fixed";
       video.style.top = 0;
-      if (!video.paused) video.pause();
-    }
+    }    
+    eventRegistered = true;
   };
 
   return (

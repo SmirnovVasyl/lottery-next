@@ -45,13 +45,13 @@ export const HomeComponent = () =>
 
   return (
     <>
-      <video className="top-0 left-0 object-cover w-screen h-screen" src="./video/MYLT_Subtitles.mp4" controls={false} />
+      <video className="top-0 left-0 object-cover w-screen min-h-screen" src="./video/MYLT_Subtitles.mp4" controls={false} />
 
       <div className='container_'>
         <div className='flex flex-col px-30 py-50 md:px-80 md:py-100 md:pb-200'>
-          <ScrollAnimation animateIn='fadeIn' >
+          {/* <ScrollAnimation animateIn='fadeIn' >
             <video src='./video/MYLT_firstSection.mp4' controls={true} />
-          </ScrollAnimation>
+          </ScrollAnimation> */}
 
           <div className='text-[35px] leading-[60px] font-[700] tracking-[0.04em] pt-30 pb-5 md:pt-80 md:pb-20 md:text-[45px]'>
             <ScrollAnimation animateIn='fadeIn'>
@@ -68,7 +68,7 @@ export const HomeComponent = () =>
       </div>
 
       <div className='bg-[#ffffff0a] backdrop-blur-[5.5px]'>
-        <div className='container_ relative grid grid-cols-1 md:grid-cols-2 gap-20 py-50'>
+        <div className='relative grid grid-cols-1 gap-20 container_ md:grid-cols-2 py-50'>
           <ScrollAnimation animateIn='fadeIn'>
             <div className='flex flex-col items-center justify-end'>
               <div className='relative'>
@@ -81,7 +81,7 @@ export const HomeComponent = () =>
           </ScrollAnimation>
 
           <ScrollAnimation animateIn='fadeIn'>
-            <div className='w-full flex flex-col justify-end items-start p-25 md:p-0 md:pr-50'>
+            <div className='flex flex-col items-start justify-end w-full p-25 md:p-0 md:pr-50'>
               <div className='text-[35px] leading-[60px] font-[600] md:text-[45px]'>Why choose us?</div>
               <div className='text-[18px] leading-[25px] font-[300] Poppins'>
                 MYLT offers the unique opportunity of profit from people's chance by letting them sell/auction their winning tickets.
@@ -89,7 +89,7 @@ export const HomeComponent = () =>
               </div>
 
               <div className='flex flex-row pt-30'>
-                <div className='connect_wallet-btn px-30 py-20 cursor-pointer'>
+                <div className='py-20 cursor-pointer connect_wallet-btn px-30'>
                   Connect Wallet
                 </div>
               </div>
@@ -104,7 +104,7 @@ export const HomeComponent = () =>
 
       <div className='fourth-section-bg'>
         <div className='relative'>
-          <div className='container_ flex flex-col justify-center items-center py-80 px-35 z-10'>
+          <div className='z-10 flex flex-col items-center justify-center container_ py-80 px-35'>
             <div className='text-[45px] font-[700] z-10'>
               <ScrollAnimation animateIn='fadeIn'>
                 The Intersteller Story
@@ -116,13 +116,13 @@ export const HomeComponent = () =>
               </ScrollAnimation>
             </div>
 
-            <div className='timeline-wrapper w-full py-50 z-10 overflow-hidden'>
+            <div className='z-10 w-full overflow-hidden timeline-wrapper py-50'>
               <Timeline position={timeFormat}>
                 <TimelineItem>
                   <TimelineSeparator>
                     <TimelineConnector sx={{ backgroundColor: 'unset' }} />
                     <ScrollAnimation animateIn='fadeIn'>
-                      <TimelineDot className='timeline_image1 w-50 md:w-80 h-50 md:h-80 p-0 border-0' />
+                      <TimelineDot className='p-0 border-0 timeline_image1 w-50 md:w-80 h-50 md:h-80' />
                     </ScrollAnimation>
                     <TimelineConnector sx={{ backgroundColor: '#FB3951' }} />
                   </TimelineSeparator>
@@ -131,7 +131,7 @@ export const HomeComponent = () =>
                     <ScrollAnimation animateIn={`${timeFormat === 'alternate' ? 'bounceInRight' : 'bounceInLeft'}`}>
                       <div className='timelineBox_contain'>
                         <div className='timeline-border-bg'>
-                          <div className='px-15 py-10'>
+                          <div className='py-10 px-15'>
                             <div className='text-[35px] font-[700]'>BAYC NFT</div>
                             <div className='text-[15px] font-[100]'>
                               The NFT collection took over the world in only a few months. Owning an NFT from BAYC is already more like a high-status symbol and a pretty expensive one to say the least. With only 10,000 NFTs in circulation and a floor price of 65 ETH ($75,000) per NFT in the latter stages of the 2022 bear market, this can quickly become one of your most profitable holdings when the NFTs restore their value in the upcoming bull run. Some BAYC NFT owners include Eminem, Neymar Jr, Justin Bieber, and potentially… you?
@@ -147,7 +147,7 @@ export const HomeComponent = () =>
                   <TimelineSeparator>
                     <TimelineConnector sx={{ backgroundColor: '#FB3951' }} />
                     <ScrollAnimation animateIn='fadeIn'>
-                      <TimelineDot className='timeline_image2 w-50 md:w-80 h-50 md:h-80 p-0 border-0' />
+                      <TimelineDot className='p-0 border-0 timeline_image2 w-50 md:w-80 h-50 md:h-80' />
                     </ScrollAnimation>
                     <TimelineConnector sx={{ backgroundColor: '#FB3951' }} />
                   </TimelineSeparator>
@@ -156,7 +156,7 @@ export const HomeComponent = () =>
                     <ScrollAnimation animateIn='bounceInLeft'>
                       <div className='timelineBox_contain2'>
                         <div className='timeline-border-bg'>
-                          <div className='px-15 py-10'>
+                          <div className='py-10 px-15'>
                             <div className='text-[35px] font-[700]'>MAYC NFT</div>
                             <div className='text-[15px] font-[100]'>
                               Yuga Labs, the team behind the BAYC NFT collection, went further by creating MAYC. With an already established team and clear goals, this project is destined for success. There are 20,000 MAYC NFTs, which are traded for around 10.8 ETH ($12,800). Not bad, considering that we are in the worst bear market in the last five years. All MAYC holders get multiple benefits as the project is closely associated with the BAYC, which will skyrocket the value of these NFTs in the next cycle.
@@ -172,7 +172,7 @@ export const HomeComponent = () =>
                   <TimelineSeparator>
                     <TimelineConnector sx={{ backgroundColor: '#FB3951' }} />
                     <ScrollAnimation animateIn='fadeIn'>
-                      <TimelineDot className='timeline_image3 w-50 md:w-80 h-50 md:h-80 p-0 border-0' />
+                      <TimelineDot className='p-0 border-0 timeline_image3 w-50 md:w-80 h-50 md:h-80' />
                     </ScrollAnimation>
                     <TimelineConnector sx={{ backgroundColor: '#FB3951' }} />
                   </TimelineSeparator>
@@ -181,7 +181,7 @@ export const HomeComponent = () =>
                     <ScrollAnimation animateIn={`${timeFormat === 'alternate' ? 'bounceInRight' : 'bounceInLeft'}`}>
                       <div className='timelineBox_contain'>
                         <div className='timeline-border-bg'>
-                          <div className='px-15 py-10'>
+                          <div className='py-10 px-15'>
                             <div className='text-[35px] font-[700]'>OTHERSIDE NFT</div>
                             <div className='text-[15px] font-[100]'>
                               Owning land in the real world can be expensive, so why not transition to the Metaverse? The Otherside NFT collection is one of the most extensive in the world of NFTs. Considering it has over 99,000 NFTs, it's crazy to think that the floor price per Otherside NFT stands at 1.10 ETH ($1,300), which is more than the late 2022 price of Ethereum! But these NFTs aren't like many others in the market. They are digital lands that can be used in the unique Otherside game. So, it won't be a surprise if the current value of the Otherside NFTs triples in the near future. And you can easily win them here at MYLT!
@@ -197,7 +197,7 @@ export const HomeComponent = () =>
                   <TimelineSeparator>
                     <TimelineConnector sx={{ backgroundColor: '#FB3951' }} />
                     <ScrollAnimation animateIn='fadeIn'>
-                      <TimelineDot className='timeline_image4 w-50 md:w-80 h-50 md:h-80 p-0 border-0' />
+                      <TimelineDot className='p-0 border-0 timeline_image4 w-50 md:w-80 h-50 md:h-80' />
                     </ScrollAnimation>
                     <TimelineConnector sx={{ backgroundColor: '#FB3951' }} />
                   </TimelineSeparator>
@@ -206,7 +206,7 @@ export const HomeComponent = () =>
                     <ScrollAnimation animateIn='bounceInLeft'>
                       <div className='timelineBox_contain2'>
                         <div className='timeline-border-bg'>
-                          <div className='px-15 py-10'>
+                          <div className='py-10 px-15'>
                             <div className='text-[35px] font-[700]'>Four Collectionary Rolex Watches</div>
                             <div className='text-[15px] font-[100]'>
                               Rolex watches will never go out of trend. It is one of the most luxurious items to have on your wrist. And deservedly, this is one of the best investments you can make. Over time the price of some collection Rolex watches has increased drastically. So, it's safe to say the four Rolex watches you can win from MYLT can turn into a fortune in the future.
@@ -222,7 +222,7 @@ export const HomeComponent = () =>
                   <TimelineSeparator>
                     <TimelineConnector sx={{ backgroundColor: '#FB3951' }} />
                     <ScrollAnimation animateIn='fadeIn'>
-                      <TimelineDot className='timeline_image5 w-50 md:w-80 h-50 md:h-80 p-0 border-0' />
+                      <TimelineDot className='p-0 border-0 timeline_image5 w-50 md:w-80 h-50 md:h-80' />
                     </ScrollAnimation>
                     <TimelineConnector sx={{ backgroundColor: '#FB3951' }} />
                   </TimelineSeparator>
@@ -231,7 +231,7 @@ export const HomeComponent = () =>
                     <ScrollAnimation animateIn={`${timeFormat === 'alternate' ? 'bounceInRight' : 'bounceInLeft'}`}>
                       <div className='timelineBox_contain'>
                         <div className='timeline-border-bg'>
-                          <div className='px-15 py-10'>
+                          <div className='py-10 px-15'>
                             <div className='text-[35px] font-[700]'>Apple Products</div>
                             <div className='text-[15px] font-[100]'>
                               In the digital era, technological gadgets are incredibly useful in our daily life. And when it comes to products like these, the first company that comes to mind is Apple. From our MYLT lottery, you can win the latest Apple devices that will help with your productivity tasks and entertainment for years to come.
@@ -247,7 +247,7 @@ export const HomeComponent = () =>
                   <TimelineSeparator>
                     <TimelineConnector sx={{ backgroundColor: '#FB3951' }} />
                     <ScrollAnimation animateIn='fadeIn'>
-                      <TimelineDot className='timeline_image6 w-50 md:w-80 h-50 md:h-80 p-0 border-0' />
+                      <TimelineDot className='p-0 border-0 timeline_image6 w-50 md:w-80 h-50 md:h-80' />
                     </ScrollAnimation>
                     <TimelineConnector sx={{ backgroundColor: 'unset' }} />
                   </TimelineSeparator>
@@ -256,7 +256,7 @@ export const HomeComponent = () =>
                     <ScrollAnimation animateIn='bounceInLeft'>
                       <div className='timelineBox_contain2'>
                         <div className='timeline-border-bg'>
-                          <div className='px-15 py-10'>
+                          <div className='py-10 px-15'>
                             <div className='text-[35px] font-[700]'>MYLT TOKENS</div>
                             <div className='text-[15px] font-[100]'>
                               The MYLT tokens are at the core of your significant winning chance in our lottery. When playing frequently, you will encounter them as winning prizes and begin to stack them. You should know that these tokens are unique tools that are extremely valuable as they can be used for buying tickets from all the MYLT lotteries. Of course, you would need enough of them to make a purchase, so hope for the winning tickets to bring you many tokens at once.
@@ -270,7 +270,7 @@ export const HomeComponent = () =>
               </Timeline>
             </div>
 
-            <div className='flex flex-row justify-center z-10'>
+            <div className='z-10 flex flex-row justify-center'>
               <ScrollAnimation animateIn='fadeIn'>
                 <div className={`connect_wallet-btn px-50 py-10 cursor-pointer select-none`}>
                   Mint
@@ -285,8 +285,8 @@ export const HomeComponent = () =>
         </div>
 
         <div className='bg-[#ffffff0a] backdrop-blur-[5.5px] overflow-hidden'>
-          <div className='container_ grid grid-cols-1 md:grid-cols-2 gap-20 py-50'>
-            <div className='w-full flex flex-col justify-end items-start px-20 md:px-50'>
+          <div className='grid grid-cols-1 gap-20 container_ md:grid-cols-2 py-50'>
+            <div className='flex flex-col items-start justify-end w-full px-20 md:px-50'>
               <div className='text-[35px] leading-[60px] font-[600] md:text-[45px]'>
                 <ScrollAnimation animateIn='fadeIn'>
                   75%+ Winning Tickets
@@ -301,7 +301,7 @@ export const HomeComponent = () =>
 
               <div className='flex flex-row pt-30'>
                 <ScrollAnimation animateIn='bounceInLeft'>
-                  <div className='connect_wallet-btn px-30 py-15 cursor-pointer'>
+                  <div className='cursor-pointer connect_wallet-btn px-30 py-15'>
                     Connect Wallet
                   </div>
                 </ScrollAnimation>
@@ -323,7 +323,7 @@ export const HomeComponent = () =>
       </div>
 
       <div className='fifth-section-bg'>
-        <div className='container_ flex flex-col justify-center items-center py-80 px-35'>
+        <div className='flex flex-col items-center justify-center container_ py-80 px-35'>
           <div className='text-[30px] font-[700] leading-[35px] md:leading-[50px] max-w-[500px] text-center md:text-[45px] pb-20'>
             <ScrollAnimation animateIn='fadeInDown'>
               Cheaper Tickets in Our Community Whitelist
@@ -336,8 +336,8 @@ export const HomeComponent = () =>
             </ScrollAnimation>
           </div>
 
-          <div className='w-full grid grid-cols-1 gap-50 sm:grid-cols-2 md:grid-cols-3'>
-            <div className='flex flex-col justify-center items-center'>
+          <div className='grid w-full grid-cols-1 gap-50 sm:grid-cols-2 md:grid-cols-3'>
+            <div className='flex flex-col items-center justify-center'>
               <ScrollAnimation animateIn='flipInY'>
                 <div className='box-border-image w-full max-w-[250px] px-40 py-50'>
                   <div className='text-[18px] font-[200] text-[#bfb4b4]'>
@@ -352,7 +352,7 @@ export const HomeComponent = () =>
               </ScrollAnimation>
             </div>
 
-            <div className='flex flex-col justify-center items-center'>
+            <div className='flex flex-col items-center justify-center'>
               <ScrollAnimation animateIn='flipInY'>
                 <div className='box-border-image w-full max-w-[250px] px-40 py-50'>
                   <div className='text-[18px] font-[200] text-[#bfb4b4]'>
@@ -367,7 +367,7 @@ export const HomeComponent = () =>
               </ScrollAnimation>
             </div>
 
-            <div className='flex flex-col justify-center items-center'>
+            <div className='flex flex-col items-center justify-center'>
               <ScrollAnimation animateIn='flipInY'>
                 <div className='box-border-image w-full max-w-[250px] px-40 py-50'>
                   <div className='text-[18px] font-[200] text-[#bfb4b4]'>
