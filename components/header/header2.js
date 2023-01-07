@@ -17,7 +17,7 @@ import Phantom from '../../assets/image/connect-wallet/Phantom.png'
 import Core from '../../assets/image/connect-wallet/Core.png'
 
 
-export const Header = ({ animation }) =>
+export const Header2 = ({ animation }) =>
 {
   const [anchorEl, setAnchorEl] = useState(null);
   const openStatus = Boolean(anchorEl);

@@ -1,11 +1,11 @@
-import { CommonLayout } from "../components/common-layout"
+import { CommonLayout1 } from "../components/common-layout1"
 import { StatisticLottery_ } from '../components/statisticLottery/statisticLottery_'
 
 export default function Statistic() 
 {
   return (
-    <CommonLayout fixedHeader={false}>
+    <CommonLayout1 fixedHeader={false}>
       <StatisticLottery_ />
-    </CommonLayout>
+    </CommonLayout1>
   )
 }

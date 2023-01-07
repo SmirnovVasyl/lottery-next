@@ -11,7 +11,7 @@ import myltRed from '../../assets/image/mylt-img/RED.gif'
 import myltGold from '../../assets/image/mylt-img/GOLD.gif'
 import myltPurple from '../../assets/image/mylt-img/PURPLE.gif'
 
-export const Footer = () =>
+export const Footer2 = () =>
 {
   return (
     <div className={styles.footerBg}>

@@ -1,11 +1,11 @@
-import { CommonLayout } from "../components/common-layout"
+import { CommonLayout1 } from "../components/common-layout1"
 import { RoadMap_ } from '../components/roadMap/roadMap_'
 
 export default function RoadMap() 
 {
   return (
-    <CommonLayout fixedHeader={false}>
+    <CommonLayout1 fixedHeader={false}>
       <RoadMap_ />
-    </CommonLayout>
+    </CommonLayout1>
   )
 }

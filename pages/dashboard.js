@@ -1,11 +1,11 @@
-import { CommonLayout } from "../components/common-layout"
+import { CommonLayout2 } from "../components/common-layout2"
 import { Dashboard_ } from '../components/dashboard/dashboard_'
 
 export default function Dashboard() 
 {
   return (
-    <CommonLayout fixedHeader={false}>
+    <CommonLayout2 fixedHeader={false}>
       <Dashboard_ />
-    </CommonLayout>
+    </CommonLayout2>
   )
 }

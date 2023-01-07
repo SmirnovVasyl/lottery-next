@@ -1,11 +1,11 @@
-import { CommonLayout } from "../components/common-layout"
+import { CommonLayout1 } from "../components/common-layout1"
 import { ClaimReward_ } from '../components/claimReward/claimReward_'
 
 export default function Dashboard() 
 {
   return (
-    <CommonLayout fixedHeader={false}>
+    <CommonLayout1 fixedHeader={false}>
       <ClaimReward_ />
-    </CommonLayout>
+    </CommonLayout1>
   )
 }

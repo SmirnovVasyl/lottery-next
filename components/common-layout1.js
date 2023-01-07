@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import { Header } from './header/header'
-import { Footer } from './footer/footer'
+import { Header1 } from './header/header1'
+import { Footer1 } from './footer/footer1'
 
-export const CommonLayout = ({ children, animation }) =>
+export const CommonLayout1 = ({ children, animation }) =>
 {
   return (
     <>
@@ -18,9 +18,9 @@ export const CommonLayout = ({ children, animation }) =>
       </Head>
 
       <main className='lottery-layout-wrapper'>
-        <section className='header-section'><Header animation={animation} /></section>
+        <section className='header-section'><Header1 animation={animation} /></section>
         <section className={`content-section ${!!animation ? 'mt-[200vh]' : 'mt-60'}`}>{children}</section>
-        <section className='footer-section'><Footer /></section>
+        <section className='footer-section'><Footer1 /></section>
       </main>
     </>
   )
