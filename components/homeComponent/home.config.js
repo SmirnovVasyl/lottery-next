@@ -1,4 +1,10 @@
-import slickImage1 from '../../assets/image/creator/creator_slick1.png'
+import creator1 from '../../assets/image/creator/creator1.png'
+import creator2 from '../../assets/image/creator/creator2.png'
+import creator3 from '../../assets/image/creator/creator3.png'
+import creator4 from '../../assets/image/creator/creator4.png'
+import creator5 from '../../assets/image/creator/creator5.png'
+import creator6 from '../../assets/image/creator/creator6.png'
+import creator7 from '../../assets/image/creator/creator7.png'
 
 export const slickSettings = {
   dots: false,
@@ -54,12 +60,12 @@ export const slickSettings = {
 }
 
 export const creatorLists = [
-  { name: '@Itsjames45', user_img: slickImage1 },
-  { name: '@Itsjames45', user_img: slickImage1 },
-  { name: '@Itsjames45', user_img: slickImage1 },
-  { name: '@Itsjames45', user_img: slickImage1 },
-  { name: '@Itsjames45', user_img: slickImage1 },
-  { name: '@Itsjames45', user_img: slickImage1 },
-  { name: '@Itsjames45', user_img: slickImage1 },
-  { name: '@Itsjames45', user_img: slickImage1 },
+  { name: '@Itsjames45', user_img: creator1 },
+  { name: '@Itsjames45', user_img: creator2 },
+  { name: '@Itsjames45', user_img: creator3 },
+  { name: '@Itsjames45', user_img: creator7 },
+  { name: '@Itsjames45', user_img: creator4 },
+  { name: '@Itsjames45', user_img: creator5 },
+  { name: '@Itsjames45', user_img: creator6 },
+  { name: '@Itsjames45', user_img: creator7 },
 ]
