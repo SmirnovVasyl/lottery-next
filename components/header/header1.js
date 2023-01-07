@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useState } from 'react';
 import { Menu } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 import { menuList } from './header.config'
 import Splash from "../splash";
@@ -52,29 +53,22 @@ export const Header1 = ({ animation }) =>
           anchorEl={anchorElWC}
           open={openStatusWC}
           onClose={WCmenuClose}
-          anchorOrigin={{ vertical: 'bottom', horizontal: 'right', }}
+          anchorOrigin={{ vertical: 'top', horizontal: 'right', }}
           transformOrigin={{ vertical: 'top', horizontal: 'right', }}
           PaperProps={{
             sx: {
-              mt: 1.5,
+              mt: -0.5,
               color: 'white',
               bgcolor: '#323150',
-              overflow: 'visible',
-              '& .MuiAvatar-root': {
-                width: 32, height: 32,
-                ml: -0.5, mr: 1,
-              },
-              '&:before': {
-                content: '""',
-                display: 'block', position: 'absolute',
-                top: 0, right: 14, width: 10, height: 10,
-                bgcolor: '#323150', zIndex: 0,
-                transform: 'translateY(-50%) rotate(45deg)',
-              },
             },
           }}
         >
-          <div className='w-250 flex flex-col gap-10 px-15'>
+          <div className='w-250 flex flex-col gap-10 px-15 py-10'>
+            <div className='flex flex-row justify-between items-center'>
+              <span className='text-20 font-[500]'>Select your wallet</span>
+              <CloseIcon className='text-25 cursor-pointer' onClick={WCmenuClose} />
+            </div>
+
             <div className='flex flex-row gap-10 cursor-pointer'>
               <Image src={metamask} alt="connect-wallet" className='w-30 h-30' />
               <div className='text-[18] font-[500] uppercase'>metamask</div>
