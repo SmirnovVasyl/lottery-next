@@ -16,8 +16,7 @@ export default function Links()
           <a href='/connectWallet' target='_blank' className='underline text-blue-600'>Connect Wallet</a>
           <a href='/dashboardMain1' target='_blank' className='underline text-blue-600'>Dashboard Main1</a>
           <a href='/claim' target='_blank' className='underline text-blue-600'>Claim</a>
-          <a href='/claimReward' target='_blank' className='underline text-blue-600'>Claim reward</a>
-          <a href='/mintLottery1' target='_blank' className='underline text-blue-600'>Mint Lottery 1</a>
+
           <a href='/mintLottery2' target='_blank' className='underline text-blue-600'>Mint Lottery 2</a>
           <a href='/mintLottery3' target='_blank' className='underline text-blue-600'>Mint Lottery 3</a>
 
@@ -32,6 +31,12 @@ export default function Links()
           <a href='/statisticLottery' target='_blank' className='underline text-blue-600'>Statistic of Lottery 2</a>
           <a href='/dashboard' target='_blank' className='underline text-blue-600'>Dashboard</a>
           <a href='/dashboardMain' target='_blank' className='underline text-blue-600'>Dashboard Main</a>
+          <a href='/claimForm' target='_blank' className='underline text-blue-600'>ClaimForm</a>
+          <a href='/claimReward' target='_blank' className='underline text-blue-600'>Claim reward Digital</a>
+          <a href='/claimRewardPhysical' target='_blank' className='underline text-blue-600'>Claim reward Physical</a>
+          <a href='/mintLottery1' target='_blank' className='underline text-blue-600'>Mint Lottery Public Phase</a>
+
+
         </div>
       </main>
     </>
