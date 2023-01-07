@@ -30,3 +30,25 @@ export const slickSettings = {
   nextArrow: <SampleNextArrow />,
   prevArrow: <SamplePrevArrow />
 };
+
+export const progressConfig = {
+  fontColor: "#FFC55F",
+  fontSize: "20px",
+  fontWeight: 700,
+  size: '100%',
+  stroke: 10,
+  strokeBottom: 5,
+  speed: 60,
+  cut: 0,
+  rotation: -90,
+  opacity: 10,
+  fill: "#00897B",
+  unit: "%",
+  textPosition: "0.35em",
+  animationOff: false,
+  strokeDasharray: "10,1",
+  inverse: false,
+  round: false,
+  number: true,
+  linearGradient: ["#FFC55F", "#FB3951", "#E25A64"]
+};
